@@ -1,0 +1,45 @@
+{
+  "name": "botbuilder-linebot",
+  "version": "1.0.0",
+  "description": "This is a botbuilder extension for connecting to Line Messaging API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "clear && tsc && node --inspect example/index.js",
+    "debug": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run build\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --names \"TSC,BOT\" -c white,cyan --kill-others \"tsc -w\" \"nodemon example/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasparChou/botbuilder-linebot.git"
+  },
+  "keywords": [
+    "line",
+    "linebot",
+    "botbuilder",
+    "line-messaging-api"
+  ],
+  "author": "Caspar Chou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CasparChou/botbuilder-linebot/issues"
+  },
+  "homepage": "https://github.com/CasparChou/botbuilder-linebot#readme",
+  "dependencies": {
+    "@types/crypto-js": "^3.1.39",
+    "@types/isomorphic-fetch": "0.0.34",
+    "body-parser": "^1.18.2",
+    "botbuilder": "^3.14.1",
+    "concurrently": "^3.5.1",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^5.0.1",
+    "es6-promises": "^1.0.10",
+    "express": "^4.16.3",
+    "isomorphic-fetch": "^2.2.1",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8"
+  }
+}
